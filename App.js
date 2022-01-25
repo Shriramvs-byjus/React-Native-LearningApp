@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, StatusBar, Button, Text, View } from 'react-native';
+import { StyleSheet, StatusBar, Button, Text, View, Alert } from 'react-native';
 
 type Props = {};
 export default class App extends Component <Props> {
@@ -8,7 +8,10 @@ export default class App extends Component <Props> {
     return (
         <View>
           <Text style={styles.welcome}> Hello Shriram !!</Text> 
-          <Button title="Display Project Name"> </Button>   
+          <Button 
+                 title="Display Project Name"
+                 onPress={() => Alert.alert('Byjus Mentor Connect')}
+          > </Button>   
           <StatusBar backgroundColor="#b3e6ff"  barStyle = "dark-content"></StatusBar>      
         </View>
     );
