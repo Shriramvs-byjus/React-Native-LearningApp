@@ -21,7 +21,9 @@ export default class App extends Component <Props> {
                 text: "OK",
                 onPress: () => console.log("OK Pressed")
               }
-            ]
+            ],
+            // Added cancelable property to dismiss the alert by clicking outside of the alert box
+            {cancelable: true}
     );
 
     render() {
