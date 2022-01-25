@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import { StyleSheet, StatusBar, Button, Text, View, Alert } from 'react-native';
+import { ImageBackground, StyleSheet, StatusBar, Button, Text, View, Alert} from 'react-native';
+
+const image = { uri: "https://reactjs.org/logo-og.png" };
 
 type Props = {};
 export default class App extends Component <Props> {
@@ -30,10 +32,13 @@ export default class App extends Component <Props> {
     return (
         <View>
           <Text style={styles.welcome}> Hello Shriram !!</Text> 
-          <Button 
+          <Button                  
                  title="Display Project Name"                
                  onPress={this.displayAlert}
           > </Button>   
+          <ImageBackground source={image}>
+            <Text style={styles.text}>  </Text>
+            </ImageBackground>       
           <StatusBar backgroundColor="#b3e6ff"  barStyle = "dark-content"></StatusBar>      
         </View>
     );
@@ -48,5 +53,17 @@ const styles = StyleSheet.create({
     margin: 10,
     color: 'green',
     fontWeight: 'bold',   
-  }
+  },
+  image: {
+    flex : 1,
+    justifyContent : 'center',
+    width: 50,
+    height: 50    
+  },
+  text: {
+    color: "white",
+    lineHeight: 200,
+    textAlign: 'center',
+    fontWeight: 'bold'
+  } 
 });
